@@ -10,6 +10,7 @@ nginx: context
 
 certbot: context
 	docker compose up $(UP_ARGS) certbot
+	docker exec nginx nginx -s reload
 
 context:
 	docker context use ocean
