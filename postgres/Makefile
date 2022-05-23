@@ -5,6 +5,6 @@ endif
 
 deploy:
 	docker context use ocean
-	docker compose up --force-recreate --detach
+	docker compose up --detach
 
 .PHONY: deploy
