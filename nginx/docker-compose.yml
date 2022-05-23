@@ -3,6 +3,8 @@ services:
   nginx:
     image: nginx-release
     container_name: nginx
+    build:
+      context: .
     ports:
       - "80:80"
       - "443:443"
