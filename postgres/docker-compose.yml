@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx:
+    image: postgis/postgis:14-3.1
+    container_name: postgis-14
+    env_file:
+      - .env.postgres
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - /data/postgresql:/var/lib/postgresql/data
+    networks:
+      - postgres
+networks:
+  postgres:
+    name: postgres
