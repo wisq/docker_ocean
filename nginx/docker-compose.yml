@@ -17,6 +17,17 @@ services:
     volumes:
       - /data/certbot/conf:/etc/letsencrypt
       - /data/certbot/www:/var/www/certbot
+    entrypoint:
+      - certbot
+      - certonly
+      - --non-interactive
+      - --webroot
+      - --webroot-path=/var/www/certbot
+      - --email=wisq@wisq.net
+      - --domains=ismypowerbackyet.com
+      - --rsa-key-size=4096
+      - --agree-tos
+      - --no-eff-email
 networks:
   nginx:
     name: nginx
