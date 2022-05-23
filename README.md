@@ -2,6 +2,8 @@
 
 A collection of Docker configs and scripts to run my personal projects cluster.
 
+The `ocean` name is because I deploy these to a [DigitalOcean Docker](https://marketplace.digitalocean.com/apps/docker) "one-click" droplet.  Aside from setting up some custom firewall rules, I've been able to leave that host mostly untouched, just running these scripts from my laptop to remotely launch containers.
+
 I've made these public so others can use them as examples.
 
 ## nginx
