@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nginx:
+  postgres:
     image: postgis/postgis:14-3.1
     container_name: postgis-14
     env_file:
@@ -11,6 +11,7 @@ services:
       - /data/postgresql:/var/lib/postgresql/data
     networks:
       - postgres
+    restart: unless-stopped
 networks:
   postgres:
     name: postgres
